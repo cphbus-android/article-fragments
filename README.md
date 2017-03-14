@@ -21,3 +21,4 @@ class MainFragmentActivity : FragmentActivity() {
 ```
 
 Next create classes for the fragments. They extends the `Fragment` class.
+Create it using the Java wizard:
