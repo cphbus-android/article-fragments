@@ -76,6 +76,7 @@ And the layout of the frame activitys xml file:
 </LinearLayout>
 ```
 Run the app, the result should look like this:
+
 ![App with main fragment](https://rawgit.com/cphbus-android/article-fragments/master/image/main-fragment.png)
 
 Create a copy of the `MainFragment` class and layout, call it `SubFragment`
@@ -101,3 +102,8 @@ Change the frame activitys xml:
 
 </LinearLayout>
 ```
+Run the app, the result with two fragments:
+
+![App with main fragment](https://rawgit.com/cphbus-android/article-fragments/master/image/main-sub-fragment.png)
+
+
