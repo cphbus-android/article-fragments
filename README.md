@@ -68,11 +68,36 @@ And the layout of the frame activitys xml file:
     android:layout_height="fill_parent">
 
     <fragment android:name="dk.cphbusiness.template.MainFragment"
-        android:id="@+id/headlines_fragment"
+        android:id="@+id/main_fragment"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent" />
 
 </LinearLayout>
 ```
+Run the app, the result should look like this:
+![Using Java Wizard](https://rawgit.com/cphbus-android/article-fragments/master/image/main-fragment.png)
+
 Create a copy of the `MainFragment` class and layout, call it `SubFragment`
+Change the frame activitys xml:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <fragment android:name="dk.cphbusiness.template.MainFragment"
+        android:id="@+id/main_fragment"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+    <fragment android:name="dk.cphbusiness.template.SubFragment"
+        android:id="@+id/sub_fragment"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+```
