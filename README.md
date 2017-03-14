@@ -23,4 +23,4 @@ class MainFragmentActivity : FragmentActivity() {
 Next create classes for the fragments. They extends the `Fragment` class.
 Create it using the Java wizard:
 
-![Using Java Wizard](https://rawgit.com/cphbus-android/article-fragmnets/master/image/fragment-wizard.png)
+![Using Java Wizard](https://rawgit.com/cphbus-android/article-fragments/master/image/fragment-wizard.png)
