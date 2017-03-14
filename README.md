@@ -75,3 +75,4 @@ And the layout of the frame activitys xml file:
 
 </LinearLayout>
 ```
+Create a copy of the `MainFragment` class and layout, call it `SubFragment`
