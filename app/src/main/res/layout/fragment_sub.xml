@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="dk.cphbusiness.template.MainFragment">
+    tools:context="dk.cphbusiness.template.SubFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello Main Fragment"
+        android:text="Hello Sub Fragment"
         android:textAlignment="center"
         android:textSize="30dp"
-        android:background="#ffffcc"
+        android:background="#ccffff"
         />
 
 </FrameLayout>
