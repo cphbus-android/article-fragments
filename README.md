@@ -24,3 +24,19 @@ Next create classes for the fragments. They extends the `Fragment` class.
 Create it using the Java wizard:
 
 ![Using Java Wizard](https://rawgit.com/cphbus-android/article-fragments/master/image/fragment-wizard.png)
+
+Use Code -> Convert Java file to Kotlin, and clean up a little:
+
+```kotlin
+class MainFragment : Fragment() {
+
+  override fun onCreateView(
+      inflater: LayoutInflater,
+      container: ViewGroup?,
+      savedInstanceState: Bundle?): View? {
+    // Inflate the layout for this fragment
+    return inflater.inflate(R.layout.fragment_main, container, false)
+    }
+
+  }
+```
