@@ -76,7 +76,8 @@ And the layout of the frame activitys xml file:
 </LinearLayout>
 ```
 Run the app, the result should look like this:
-![Using Java Wizard](https://rawgit.com/cphbus-android/article-fragments/master/image/main-fragment.png)
+
+![App with main fragment](https://rawgit.com/cphbus-android/article-fragments/master/image/main-fragment.png)
 
 Create a copy of the `MainFragment` class and layout, call it `SubFragment`
 Change the frame activitys xml:
@@ -101,3 +102,42 @@ Change the frame activitys xml:
 
 </LinearLayout>
 ```
+Run the app, the result with two fragments:
+
+![App with main fragment](https://rawgit.com/cphbus-android/article-fragments/master/image/main-sub-fragment.png)
+
+## Dynamic fragment
+
+Fragments can also be changed during runtime. Create a new `FragmentActivity`, call it `DynamicFragmentActivity`
+
+The layout shall look like this:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</FrameLayout>
+```
+Change the Kotlin code in `DynamicFragmentActivity` to:
+```kotlin
+class DynamicFragmentActivity : FragmentActivity() {
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_dynamic_fragment)
+
+    if (savedInstanceState != null) return // already instantiated
+    val mainFragment = MainFragment()
+    mainFragment.arguments = intent.extras // arguments exist
+    supportFragmentManager
+        .beginTransaction()
+        .add(R.id.fragment_container, mainFragment)
+        .commit()
+    }
+
+  }
+```
+
